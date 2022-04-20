@@ -3,8 +3,6 @@ package com.mirea.sumachev.yandexdriver;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.widget.Toast;
 
 import com.yandex.mapkit.MapKitFactory;
 import com.yandex.mapkit.RequestPoint;
@@ -19,8 +17,6 @@ import com.yandex.mapkit.map.CameraPosition;
 import com.yandex.mapkit.map.MapObjectCollection;
 import com.yandex.mapkit.mapview.MapView;
 import com.yandex.runtime.Error;
-import com.yandex.runtime.network.NetworkError;
-import com.yandex.runtime.network.RemoteError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements DrivingSession.Dr
     }
 
     @Override
-    public void onDrivingRoutes(@NonNull @androidx.annotation.NonNull List<DrivingRoute> list) {
+    public void onDrivingRoutes(@androidx.annotation.NonNull List<DrivingRoute> list) {
 
         int color;
         for (int i = 0; i < list.size(); i++) {
@@ -73,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements DrivingSession.Dr
     }
 
     @Override
-    public void onDrivingRoutesError(@NonNull @androidx.annotation.NonNull Error error) {
+    public void onDrivingRoutesError(@androidx.annotation.NonNull Error error) {
 
         /*String errorMessage = getString(R.string.unknown_error_message);
         if (error instanceof RemoteError) {
